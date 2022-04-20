@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/style">
+</head>
+<html>
+    <body>
+        <div class="container">
+            <h2>Click on any book to see the details.</h2>
+            <br>
+            <h4>To delete a book, click on the red "X" next to it.</h4>
+            <table class="bookContainer">
+                <% let i = 0 %>
+                <% books.forEach(s=>
+                { %> 
+                    <form action="<%=` books/${s.name}/delete?_method=DELETE` %>" method="POST">                        
+                    <% i++ %>
+                    <tr>
+                        <td class="book">
+                            <button type="submit" id="<%= i %>" onclick="return confirm('Are you sure you want to delete this book?')">X</button>
+                            <label for="<%=i%>"><%=s.name%></label>
+                        </td>
+                    </tr>
+                    </form>
+                <% });
+                %>
+            </table>
+        </div>
+        <div class="nav">
+            <a href="/home">List of books | </a>
+            <a href="/AddNewBook">Add Book | </a>
+            <a href="/DeleteABook">Delete a Book</a>
+        </div>
+    </body>
+</html>

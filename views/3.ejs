@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Lab10</title>
+    <link rel="stylesheet" href="/style">
+</head>
+<html>
+    <body>
+        <div class="container">
+            <h2 class="bookTitle"><%= books.name %></h2>
+            <table class="bookContainer">
+                <tr>
+                    <td class="book">
+                        Author:
+                        <%= books.author %>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="book">
+                        <a href="<%= books.link %>">Buy on Amazon!</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="nav">
+            <a href="/home">List of books | </a>
+            <a href="/AddNewBook">Add Book | </a>
+            <a href="/DeleteABook">Delete a Book</a>
+        </div>
+    </body>
+</html>

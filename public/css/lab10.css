@@ -1,0 +1,20 @@
+.container {
+    text-align: center;
+}
+.bookContainer {
+    width: 250px;
+    table-layout: fixed;
+    background-color: gray;
+    margin-left: 45%;
+}
+td {
+    border:1px solid;
+    background-color: #ffffff;
+}
+.nav{
+    text-align: center;
+    text-decoration: none;
+}
+button{
+    color: red;
+}
